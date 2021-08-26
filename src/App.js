@@ -26,8 +26,7 @@ function App() {
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
         currentCategory={currentCategory}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
+      
       ></Nav>
       <main>
         {!contactSelected ? ( //The shorthand condition is called a ternary operator, identified with the ? and : symbols. The ternary operator is a popular pattern in React to enable conditional rendering, similar to how we used the && operator as a short circuit. With the ternary, though, we supply the false condition to render as well.
