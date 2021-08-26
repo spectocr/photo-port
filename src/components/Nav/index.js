@@ -39,7 +39,7 @@ function Nav(props) {
           {categories.map((category) => (
             <li
               className={`mx-1 ${
-                currentCategory.name === category.name && !contactSelected && 'navActive'
+                currentCategory.name === category.name && !contactSelected && 'navActive' // hows is this working? all of these conditions...
                 }`}
               key={category.name}
             >
