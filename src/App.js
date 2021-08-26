@@ -14,7 +14,6 @@ function App() {
     { name: 'food', description: 'Delicious delicacies' },
     { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
   ]);
-
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   const [contactSelected, setContactSelected] = useState(false);
@@ -27,11 +26,18 @@ function App() {
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
         currentCategory={currentCategory}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
       ></Nav>
       <main>
-        <Contact/>
-        <Gallery currentCategory={currentCategory}></Gallery>
-        <About></About>
+        {!contactSelected ? ( //The shorthand condition is called a ternary operator, identified with the ? and : symbols. The ternary operator is a popular pattern in React to enable conditional rendering, similar to how we used the && operator as a short circuit. With the ternary, though, we supply the false condition to render as well.
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </>
+        ) : (
+          <Contact/>
+        )}
       </main>
     </div>
   );
