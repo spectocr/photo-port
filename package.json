@@ -1,7 +1,7 @@
 {
-  "homepage": "http://spectocr.github.io/photo-port",
+  "homepage": "https://spectocr.github.io/photo-port",
   "name": "photo-port",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^12.8.3",
